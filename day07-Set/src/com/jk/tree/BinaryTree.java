@@ -1,4 +1,4 @@
-package com.jk;
+package com.jk.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -45,9 +45,9 @@ public class BinaryTree<E> {
 		}
 	}
 	
-	public abstract class Visitor<E> {
+	public static  abstract class Visitor<E> {
 		boolean stop;
-		abstract boolean visit(E element);
+		public abstract boolean visit(E element);
 	}
 	
 	protected int size;
@@ -80,8 +80,7 @@ public class BinaryTree<E> {
 	}
 	
 	public void inorder(Visitor<E> visitor) {
-		if (visitor == null) return;
-		inorder(root, visitor);
+		inorder(root, visitor);;
 	}
 	
 	private void inorder(Node<E> node, Visitor<E> visitor) {
