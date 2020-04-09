@@ -7,7 +7,6 @@ import java.util.Set;
 
 public abstract class Graph<V, E> {
 	protected WeightManager<E> weightManager;
-	public abstract int edgeSize();
 	public abstract int edgesSize();
 	public abstract int verticesSize();
 	public abstract void addVertex(V v);
